@@ -17,6 +17,9 @@ RUN npm ci || npm install
 # 复制项目源码
 COPY . .
 
+# 创建数据持久化目录
+RUN mkdir -p /app/data
+
 # 暴露端口 (Railway 会通过 PORT 环境变量指定)
 EXPOSE 3000
 
