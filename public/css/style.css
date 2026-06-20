@@ -1,0 +1,217 @@
+/* ============================================
+   style.css — 自定义样式（配合 Tailwind 使用）
+   深色科技风格
+   ============================================ */
+
+/* 全局滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3454;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4564;
+}
+
+/* 文章卡片 hover 效果 */
+.article-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.1);
+}
+.article-card:hover .article-card-cover {
+  transform: scale(1.05);
+}
+.article-card-cover {
+  transition: transform 0.4s ease;
+}
+
+/* 分类筛选按钮 */
+.filter-btn {
+  background: #141b2d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #9ca3af;
+}
+.filter-btn:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  color: #67e8f9;
+}
+.filter-btn.active {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.4);
+  color: #22d3ee;
+}
+
+/* ============================================
+   Markdown 正文渲染样式
+   ============================================ */
+.prose-content {
+  color: #d1d5db;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+.prose-content h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.prose-content h3 {
+  color: #e5e7eb;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose-content p {
+  margin-bottom: 1.25rem;
+}
+.prose-content ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+.prose-content ul li {
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+.prose-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+.prose-content ol li {
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+.prose-content strong {
+  color: #67e8f9;
+  font-weight: 600;
+}
+.prose-content code {
+  background: #1e293b;
+  color: #7dd3fc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+.prose-content pre {
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.prose-content pre code {
+  background: transparent;
+  color: #e2e8f0;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.prose-content blockquote {
+  border-left: 4px solid #22d3ee;
+  background: rgba(0, 212, 255, 0.05);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  color: #94a3b8;
+}
+.prose-content blockquote p {
+  margin-bottom: 0;
+}
+.prose-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+.prose-content th {
+  background: #1e293b;
+  color: #e2e8f0;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.prose-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+}
+.prose-content tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ============================================
+   动画
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* 留言项进入动画 */
+.feedback-item {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+/* 导航栏毛玻璃效果 */
+.navbar-scrolled {
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================================
+   管理后台标签页样式
+   ============================================ */
+.tab-btn {
+  background: transparent;
+  color: #9ca3af;
+}
+.tab-btn:hover {
+  color: #e5e7eb;
+}
+.tab-btn.active {
+  background: rgba(0, 212, 255, 0.15);
+  color: #22d3ee;
+}
+
+/* line-clamp 工具类（Tailwind CDN 不含插件时用） */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

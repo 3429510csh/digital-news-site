@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数码前线 — 工具教程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#0a0e1a] text-gray-200 min-h-screen">
+
+  <!-- 导航栏 -->
+  <nav id="navbar"></nav>
+
+  <!-- 页面标题 -->
+  <section class="border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">工具教程</h1>
+      <p class="text-gray-400">精选实用教程，助你玩转数码设备与软件工具</p>
+    </div>
+  </section>
+
+  <!-- 分类筛选 -->
+  <section class="max-w-6xl mx-auto px-4 py-6">
+    <div id="category-filter" class="flex flex-wrap gap-3 mb-8">
+      <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition-all" data-category="全部">
+        全部
+      </button>
+      <!-- 动态填充分类按钮 -->
+    </div>
+
+    <!-- 文章列表 -->
+    <div id="tutorial-list" class="space-y-6">
+      <!-- 加载中 -->
+      <div class="animate-pulse bg-[#141b2d] rounded-xl h-32 border border-white/5"></div>
+      <div class="animate-pulse bg-[#141b2d] rounded-xl h-32 border border-white/5"></div>
+    </div>
+
+    <!-- 空状态 -->
+    <div id="empty-state" class="hidden text-center py-20">
+      <div class="text-6xl mb-4">📭</div>
+      <p class="text-gray-400 text-lg">该分类暂无内容</p>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="border-t border-white/5 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
+      <p>数码前线 Digital Frontier — 仅用于本地测试</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/tutorials.js"></script>
+</body>
+</html>

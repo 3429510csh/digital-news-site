@@ -1,0 +1,26 @@
+{
+  "name": "digital-news-site",
+  "version": "1.0.0",
+  "description": "数码资讯测试网站 - 含完整后端 API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "digital",
+    "news",
+    "express",
+    "sqlite"
+  ],
+  "author": "Test",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

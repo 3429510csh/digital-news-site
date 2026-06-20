@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数码前线 — 首页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#0a0e1a] text-gray-200 min-h-screen">
+
+  <!-- 导航栏 -->
+  <nav id="navbar"></nav>
+
+  <!-- Hero 区域 -->
+  <section class="relative overflow-hidden border-b border-white/5">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10"></div>
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 50%, rgba(0,212,255,0.08), transparent 50%);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        2025 数码资讯前沿
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+        探索<span class="text-cyan-400">数码</span>世界
+        <br class="md:hidden">
+        把握科技脉搏
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        深度评测 · 硬件资讯 · 实用教程
+        <br>
+        为数码爱好者打造的资讯平台
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/tutorials.html" class="px-8 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-white font-medium transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+          浏览教程
+        </a>
+        <a href="/feedback.html" class="px-8 py-3 rounded-lg border border-gray-600 hover:border-cyan-400 text-gray-200 hover:text-cyan-400 font-medium transition-all">
+          留言反馈
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新资讯 -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-white flex items-center gap-3">
+        <span class="w-1.5 h-7 bg-cyan-400 rounded-full"></span>
+        最新资讯
+      </h2>
+      <a href="/tutorials.html" class="text-cyan-400 hover:text-cyan-300 text-sm">查看全部 →</a>
+    </div>
+
+    <!-- 文章网格 -->
+    <div id="article-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 加载骨架屏 -->
+      <div class="animate-pulse bg-[#141b2d] rounded-xl overflow-hidden border border-white/5">
+        <div class="h-48 bg-gray-800"></div>
+        <div class="p-5 space-y-3">
+          <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+          <div class="h-3 bg-gray-700 rounded"></div>
+          <div class="h-3 bg-gray-700 rounded w-5/6"></div>
+        </div>
+      </div>
+      <div class="animate-pulse bg-[#141b2d] rounded-xl overflow-hidden border border-white/5">
+        <div class="h-48 bg-gray-800"></div>
+        <div class="p-5 space-y-3">
+          <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+          <div class="h-3 bg-gray-700 rounded"></div>
+          <div class="h-3 bg-gray-700 rounded w-5/6"></div>
+        </div>
+      </div>
+      <div class="animate-pulse bg-[#141b2d] rounded-xl overflow-hidden border border-white/5">
+        <div class="h-48 bg-gray-800"></div>
+        <div class="p-5 space-y-3">
+          <div class="h-4 bg-gray-700 rounded w-3/4"></div>
+          <div class="h-3 bg-gray-700 rounded"></div>
+          <div class="h-3 bg-gray-700 rounded w-5/6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据统计 -->
+  <section class="max-w-6xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-[#141b2d] rounded-xl p-6 border border-white/5 text-center">
+        <div class="text-3xl font-bold text-cyan-400 mb-1" id="stat-articles">--</div>
+        <div class="text-gray-500 text-sm">资讯文章</div>
+      </div>
+      <div class="bg-[#141b2d] rounded-xl p-6 border border-white/5 text-center">
+        <div class="text-3xl font-bold text-purple-400 mb-1" id="stat-categories">--</div>
+        <div class="text-gray-500 text-sm">内容分类</div>
+      </div>
+      <div class="bg-[#141b2d] rounded-xl p-6 border border-white/5 text-center">
+        <div class="text-3xl font-bold text-green-400 mb-1" id="stat-views">--</div>
+        <div class="text-gray-500 text-sm">总阅读量</div>
+      </div>
+      <div class="bg-[#141b2d] rounded-xl p-6 border border-white/5 text-center">
+        <div class="text-3xl font-bold text-orange-400 mb-1" id="stat-feedbacks">--</div>
+        <div class="text-gray-500 text-sm">用户留言</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="border-t border-white/5 mt-12">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
+      <p>数码前线 Digital Frontier — 仅用于本地测试</p>
+      <p class="mt-2">© 2025 Digital News Test Site. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
